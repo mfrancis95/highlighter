@@ -5,9 +5,9 @@ defaultColors = ["\033[31m", "\033[32m", "\033[33m"]
 
 class Highlighter:
 
-    def __init__(self):
-        self.colors = defaultColors
-        self.styles = {}
+    def __init__(self, colors = defaultColors, styles = {}):
+        self.colors = colors
+        self.styles = styles
 
     def highlight(self, file):
         styles = self.styles.get(splitext(file)[1][1:], [])
